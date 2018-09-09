@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 
     // start-stop gifs on click
-    $(".gif").on("click", function () {
+    $("body").on("click", "img", function () {
         console.log(this);
         var state = $(this).attr("data-state");
         console.log(state);
@@ -38,7 +38,7 @@ $(document).ready(function () {
     });
 
     // Adding click event listen listener to all buttons
-    $("button").on("click", function () {
+    $("body").on("click", "button", function () {
         var query = $(this).attr("value");
         var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=aBe1pDrA2XYrm6eGoGrqSPfSvTp8NviK&q=" +
             query + "&limit=10&offset=0&rating=PG-13&lang=en";
