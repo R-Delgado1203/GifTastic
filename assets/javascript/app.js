@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    var gifStill;
-    var gifAnimated;
     var gifsArray = ["World of Warcraft", "StarCraft", "Halo", "BioShock", "Super Smash Bros", "heroes of the storm"];
 
     for (var i = 0; i < gifsArray.length; i++) {
