@@ -1,0 +1,51 @@
+body{
+    background: slategray;
+}
+.individual-gif{
+     
+    font-size: 12px;
+    font-weight: bold;   
+    margin: 0px;  
+    padding: 10px;  
+    display: inline-block !important;
+    width: 100%;
+    border: solid white thin;
+    margin:5px;
+    background: slategray
+}
+.card-body{
+    border: solid white thin;
+    padding: 5px;
+    margin-bottom: 0px !important;
+    border-radius: 2px;
+    margin: 2px;
+    color: black;
+    background: white;
+}
+
+#add-a-game{
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+.input-group{
+    width: 100%;
+}
+.gif-cols{
+    padding: 0px;
+    width: 100%;
+}
+.header{
+    padding: 30px;
+    margin-bottom: 10px;
+    color: white;
+    border: solid;
+    background: slategray
+}
+.btn{
+    margin: 3px;
+}
+#gif-btns{
+    margin-top: 5px;
+    padding: 10px;
+}
