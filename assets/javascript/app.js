@@ -1,10 +1,10 @@
 $(document).ready(function () {
-    var gifsArray = ["World of Warcraft", "StarCraft", "Halo", "BioShock", "Super Smash Bros", "heroes of the storm"];
+    var topics = ["World of Warcraft", "StarCraft", "Halo", "BioShock", "Super Smash Bros", "heroes of the storm"];
 
-    for (var i = 0; i < gifsArray.length; i++) {
+    for (var i = 0; i < topics.length; i++) {
         var btn = $("<button>");
-        btn.attr("value", gifsArray[i]);
-        btn.text(gifsArray[i]);
+        btn.attr("value", topics[i]);
+        btn.text(topics[i]);
         $("#gif-btns").append(btn);
     }
 
@@ -14,8 +14,8 @@ $(document).ready(function () {
         btn.attr("value", newItem);
         btn.text(newItem);
         $("#gif-btns").append(btn);
-        gifsArray.push(newItem);
-        console.log(gifsArray);
+        topics.push(newItem);
+        console.log(topics);
     });
 
 
@@ -60,8 +60,8 @@ $(document).ready(function () {
                 gif.attr("data-still", results[i].images.fixed_height_still.url);                
                 gif.attr("data-animate", results[i].images.fixed_height.url)
                 gif.attr("data-state", "still");
-                gifDiv.append(p);
                 gifDiv.append(gif);
+                gifDiv.append(p);                
                 $("#gifs").prepend(gifDiv);
             }
         });
