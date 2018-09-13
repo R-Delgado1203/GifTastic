@@ -3,12 +3,23 @@ $(document).ready(function () {
     var topics = ["Food", "Animals", "Video Games", "Movies", "Music", "Books"];
     //load initial btn array on page
     createBtns();
-    //event listener for adding new btns to the array
+    //event listener for adding new btns to the array;
     $("#add-item").on("click", addbtns);
+    //event listener for clearing btns;
+    $("#clear-list").on("click", clearbtns);
     //dynamic click handler for newly generated btns
     $(document).on("click", "button", createGifs);
     //dynamic click handler for gif start-stop
     $(document).on("click", "img", startStop);
+
+    //stop enter from reloading page
+    $("#search-input").keypress(function(event){ 
+        if(event.keyCode == 13){ 
+          event.preventDefault();
+          $("#add-item").click(); 
+          return false;
+        }
+      });
 
 
     //--------------------------------------------------functions----------------------------------------------------------//
@@ -80,6 +91,11 @@ $(document).ready(function () {
             $(this).attr("src", $(this).attr("data-still"));
             $(this).attr("data-state", "still");
         }
+    }
+
+    function clearbtns() {
+        topics = [];
+        $("#gif-btns").empty();
     }
 
 });
