@@ -11,15 +11,14 @@ $(document).ready(function () {
     $(document).on("click", "button", createGifs);
     //dynamic click handler for gif start-stop
     $(document).on("click", "img", startStop);
-
     //stop enter from reloading page
-    $("#search-input").keypress(function(event){ 
-        if(event.keyCode == 13){ 
-          event.preventDefault();
-          $("#add-item").click(); 
-          return false;
+    $("#search-input").keypress(function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            $("#add-item").click();
+            return false;
         }
-      });
+    });
 
 
     //--------------------------------------------------functions----------------------------------------------------------//
@@ -92,7 +91,7 @@ $(document).ready(function () {
             $(this).attr("data-state", "still");
         }
     }
-
+    //clear buttons section and array
     function clearbtns() {
         topics = [];
         $("#gif-btns").empty();
